@@ -31,7 +31,9 @@ const wordRepository = {
         "Famous painters": ["Picasso", "VanGogh", "Monet", "Dali", "Rembrandt", "DaVinci", "Warhol", "Kahlo"],
         "Peter Pan characters": ["Hook", "Pan", "Wendy", "Smee", "Tinkerbell", "Crocodile", "Nana", "Darling"],
         "Rock bands": ["Queen", "Kiss", "Rush", "Journey", "Nirvana", "Oasis", "Genesis", "Heart"],
-        "Disney characters": ["Daisy", "Donald", "Mickey", "Goofy", "Pluto", "Minnie", "Scrooge", "Ariel"]
+        "Disney characters": ["Daisy", "Donald", "Mickey", "Goofy", "Pluto", "Minnie", "Scrooge", "Ariel"],
+        "Doctor Who actors": ["Smith", "Tennant", "Baker", "Eccleston", "Capaldi", "Whittaker", "McCoy", "McGann"],
+        "Stephen King novels": ["It", "Misery", "Carrie", "Shining", "Stand", "PetSematary", "Cujo", "Salem"]
     },
     "Shared Word Associations": {
         "Things with a mouse": ["Computer", "Cat", "Trap", "Disney", "Maze", "Cheese", "Pad", "Hole"],
@@ -114,16 +116,25 @@ const wordRepository = {
         "Ancient civilizations": ["Roman", "Greek", "Egyptian", "Mayan", "Aztec", "Inca", "Persian", "Sumerian"],
         "Famous rivers": ["Amazon", "Nile", "Mississippi", "Yangtze", "Thames", "Danube", "Ganges", "Volga"],
         "US Presidents": ["Washington", "Lincoln", "Ford", "Bush", "Kennedy", "Adams", "Jefferson", "Truman"],
-        "Ivy League schools": ["Brown", "Harvard", "Yale", "Princeton", "Columbia", "Dartmouth", "Cornell", "Penn"]
+        "Ivy League schools": ["Brown", "Harvard", "Yale", "Princeton", "Columbia", "Dartmouth", "Cornell", "Penn"],
+        "Boroughs of New York": ["Manhattan", "Brooklyn", "Queens", "Bronx", "StatenIsland"],
+        "Continents": ["Africa", "Antarctica", "Asia", "Europe", "NorthAmerica", "SouthAmerica", "Australia"]
     },
     "Basic Categories": {
-        "Colors": ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Brown"],
+        "Colors": ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Brown", "White", "Black"],
         "Furniture": ["Chair", "Table", "Sofa", "Bed", "Desk", "Cabinet", "Stool", "Dresser"],
         "Fruits": ["Apple", "Banana", "Orange", "Grape", "Kiwi", "Mango", "Pear", "Peach"],
         "Trees": ["Oak", "Pine", "Maple", "Birch", "Cedar", "Elm", "Willow", "Ash"],
         "Mushrooms": ["Portobello", "Cremini", "Shiitake", "Oyster", "Enoki", "Morel", "Porcini", "Chanterelle"],
         "Metals": ["Gold", "Silver", "Copper", "Iron", "Zinc", "Lead", "Platinum", "Aluminum"],
-        "Shapes": ["Circle", "Square", "Triangle", "Rectangle", "Oval", "Diamond", "Hexagon", "Octagon"],
-        "Weather terms": ["Rain", "Snow", "Wind", "Hail", "Sleet", "Fog", "Cloud", "Storm"]
+        "Shapes": ["Circle", "Square", "Triangle", "Rectangle", "Oval", "Diamond", "Hexagon", "Octagon", "Star"],
+        "Weather terms": ["Rain", "Snow", "Wind", "Hail", "Sleet", "Fog", "Cloud", "Storm"],
+        "Clothing items": ["Shirt", "Pants", "Socks", "Shoes", "Hat", "Coat", "Dress", "Skirt"]
+    },
+    "Careers & Roles": {
+        "Medical professions": ["Doctor", "Nurse", "Surgeon", "Dentist", "Pharmacist", "Therapist", "Paramedic", "Optometrist"],
+        "Fantasy RPG classes": ["Warrior", "Mage", "Rogue", "Cleric", "Paladin", "Ranger", "Bard", "Monk"],
+        "Roles in a play": ["Lead", "Understudy", "Director", "Chorus", "Extra", "Villain", "Hero", "Fool"],
+        "Jobs in a restaurant": ["Chef", "Waiter", "Host", "Bartender", "Busser", "Manager", "Dishwasher", "Cook"]
     }
 };
