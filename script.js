@@ -44,6 +44,14 @@ function initGame() {
         wordBox.textContent = item.word;
         wordBox.dataset.word = item.word;
         wordBox.dataset.category = item.category;
+        
+        // Dynamically scale down font size for long words
+        if (item.word.length > 10) {
+            wordBox.style.fontSize = '0.75em';
+        } else if (item.word.length > 8) {
+            wordBox.style.fontSize = '0.9em';
+        }
+
         gameGrid.appendChild(wordBox);
     });
 
