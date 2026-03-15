@@ -46,7 +46,10 @@ const wordRepository = {
         "Things with a head": ["Coin", "Pin", "Nail", "Department", "Bed", "Lettuce", "Class", "Table"],
         "Words after 'Water'": ["Fall", "Melon", "Color", "Bed", "Mark", "Proof", "Shed", "Way"],
         "Things you can set": ["Table", "Trap", "Goal", "Record", "Alarm", "Date", "Example", "Mood"],
-        "Things you make": ["Bed", "Money", "Sense", "Time", "Peace", "Love", "Waves", "Room"]
+        "Things you make": ["Bed", "Money", "Sense", "Time", "Peace", "Love", "Waves", "Room"],
+        "Things you shout": ["Hey", "Stop", "Help", "Fire", "Wait", "Look", "Duck", "Jump"],
+        "Things that are round": ["Ball", "Coin", "Ring", "Tire", "Sun", "Globe", "Moon", "Dot"],
+        "Things you can lose": ["Time", "Mind", "Key", "Money", "Sleep", "Game", "Weight", "Hope"]
     },
     "Brands": {
         "Soap brands": ["Dove", "Ivory", "Dial", "Zest", "Coast", "Safeguard", "Olay", "Lux"],
@@ -85,7 +88,10 @@ const wordRepository = {
         "Tools in a toolbox": ["Hammer", "Screwdriver", "Wrench", "Pliers", "Tape", "Drill", "Level", "Saw"],
         "Public transit": ["Subway", "Bus", "Train", "Tram", "Ferry", "Metro", "Monorail", "Trolley"],
         "Fishing terms": ["Catch", "Bait", "Hook", "Line", "Sinker", "Rod", "Reel", "Tackle"],
-        "Punctuation marks": ["Dash", "Period", "Comma", "Colon", "Hyphen", "Slash", "Quote", "Apostrophe"]
+        "Punctuation marks": ["Dash", "Period", "Comma", "Colon", "Hyphen", "Slash", "Quote", "Apostrophe"],
+        "Things with buttons": ["Coat", "Shirt", "Remote", "Phone", "Radio", "Mouse", "Piano", "Elevator"],
+        "Things you can pack": ["Clothes", "Shoes", "Book", "Towel", "Soap", "Brush", "Camera", "Map"],
+        "Things that are sticky": ["Gum", "Tape", "Glue", "Honey", "Sap", "Tar", "Jam", "Syrup"]
     },
     "Food & Drink": {
         "Types of cheese": ["Cheddar", "Brie", "Gouda", "Swiss", "Feta", "Provolone", "Havarti", "Parmesan"],
@@ -135,6 +141,7 @@ const wordRepository = {
         "Medical professions": ["Doctor", "Nurse", "Surgeon", "Dentist", "Pharmacist", "Therapist", "Paramedic", "Optometrist"],
         "Fantasy RPG classes": ["Warrior", "Mage", "Rogue", "Cleric", "Paladin", "Ranger", "Bard", "Monk"],
         "Roles in a play": ["Lead", "Understudy", "Director", "Chorus", "Extra", "Villain", "Hero", "Fool"],
-        "Jobs in a restaurant": ["Chef", "Waiter", "Host", "Bartender", "Busser", "Manager", "Dishwasher", "Cook"]
+        "Jobs in a restaurant": ["Chef", "Waiter", "Host", "Bartender", "Busser", "Manager", "Dishwasher", "Cook"],
+        "Short occupations": ["Cop", "Doc", "Spy", "Maid", "Judge", "Mayor", "Nurse", "Pilot"]
     }
 };
