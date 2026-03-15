@@ -28,7 +28,10 @@ const wordRepository = {
         "Famous fictional detectives": ["Holmes", "Poirot", "Marple", "Columbo", "Monk", "Drew", "Hardy", "Spade"],
         "Disney princesses": ["Ariel", "Belle", "Cinderella", "Jasmine", "Mulan", "Pocahontas", "Snow", "Aurora"],
         "Star Wars characters": ["Luke", "Leia", "Han", "Yoda", "Vader", "Chewie", "R2D2", "C3PO"],
-        "Famous painters": ["Picasso", "VanGogh", "Monet", "Dali", "Rembrandt", "DaVinci", "Warhol", "Kahlo"]
+        "Famous painters": ["Picasso", "VanGogh", "Monet", "Dali", "Rembrandt", "DaVinci", "Warhol", "Kahlo"],
+        "Peter Pan characters": ["Hook", "Pan", "Wendy", "Smee", "Tinkerbell", "Crocodile", "Nana", "Darling"],
+        "Rock bands": ["Queen", "Kiss", "Rush", "Journey", "Nirvana", "Oasis", "Genesis", "Heart"],
+        "Disney characters": ["Daisy", "Donald", "Mickey", "Goofy", "Pluto", "Minnie", "Scrooge", "Ariel"]
     },
     "Shared Word Associations": {
         "Things with a mouse": ["Computer", "Cat", "Trap", "Disney", "Maze", "Cheese", "Pad", "Hole"],
@@ -39,7 +42,9 @@ const wordRepository = {
         "Words following 'Black'": ["Board", "Berry", "Bird", "Mail", "Jack", "Hole", "Magic", "Out"],
         "Words preceding 'Paper'": ["Wall", "News", "Toilet", "Scrap", "Wax", "Sand", "Graph", "Blank"],
         "Things with a head": ["Coin", "Pin", "Nail", "Department", "Bed", "Lettuce", "Class", "Table"],
-        "Words after 'Water'": ["Fall", "Melon", "Color", "Bed", "Mark", "Proof", "Shed", "Way"]
+        "Words after 'Water'": ["Fall", "Melon", "Color", "Bed", "Mark", "Proof", "Shed", "Way"],
+        "Things you can set": ["Table", "Trap", "Goal", "Record", "Alarm", "Date", "Example", "Mood"],
+        "Things you make": ["Bed", "Money", "Sense", "Time", "Peace", "Love", "Waves", "Room"]
     },
     "Brands": {
         "Soap brands": ["Dove", "Ivory", "Dial", "Zest", "Coast", "Safeguard", "Olay", "Lux"],
@@ -48,7 +53,8 @@ const wordRepository = {
         "Luxury fashion houses": ["Gucci", "Prada", "Chanel", "Dior", "Hermes", "Versace", "Fendi", "Armani"],
         "Fast food chains": ["McDonalds", "BurgerKing", "Wendys", "TacoBell", "KFC", "Subway", "Dominos", "Chipotle"],
         "Tech companies": ["Apple", "Google", "Microsoft", "Amazon", "Meta", "Tesla", "Sony", "Samsung"],
-        "Car brands": ["Ford", "Toyota", "Honda", "BMW", "Audi", "Chevrolet", "Nissan", "Mercedes"]
+        "Car brands": ["Ford", "Toyota", "Honda", "BMW", "Audi", "Chevrolet", "Nissan", "Mercedes", "Saturn", "Mercury", "Lincoln", "Jaguar"],
+        "Streaming services": ["Disney", "Netflix", "Hulu", "Prime", "Peacock", "Max", "Apple", "Paramount"]
     },
     "Games & Activities": {
         "Things you can play": ["Piano", "Game", "Music", "Fool", "Catch", "Role", "Guitar", "Sports"],
@@ -57,10 +63,16 @@ const wordRepository = {
         "Yoga poses": ["Dog", "Tree", "Mountain", "Warrior", "Child", "Lotus", "Cobra", "Bridge"],
         "Musical tempos": ["Allegro", "Adagio", "Andante", "Largo", "Presto", "Moderato", "Vivace", "Lento"],
         "Olympic sports": ["Swimming", "Gymnastics", "Track", "Fencing", "Judo", "Rowing", "Diving", "Archery"],
-        "Video game franchises": ["Mario", "Zelda", "Halo", "Pokemon", "Sonic", "FinalFantasy", "Minecraft", "Tetris"]
+        "Video game franchises": ["Mario", "Zelda", "Halo", "Pokemon", "Sonic", "FinalFantasy", "Minecraft", "Tetris"],
+        "Suits of cards": ["Heart", "Spade", "Club", "Diamond"],
+        "Playing cards": ["Jack", "Queen", "King", "Ace", "Joker"],
+        "Baseball terms": ["Diamond", "Pitcher", "Base", "Strike", "Bat", "Glove", "Home", "Out"],
+        "Golf terms": ["Green", "Tee", "Hole", "Iron", "Birdie", "Eagle", "Bogey", "Par"],
+        "Bowling terms": ["Strike", "Spare", "Pin", "Alley", "Gutter", "Turkey", "Split", "Frame"],
+        "Chess pieces": ["King", "Queen", "Rook", "Knight", "Bishop", "Pawn"]
     },
     "Locations & Objects": {
-        "Objects found in a kitchen": ["Blender", "Toaster", "Microwave", "Spatula", "Whisk", "Oven", "Fridge", "Kettle"],
+        "Objects found in a kitchen": ["Blender", "Toaster", "Microwave", "Spatula", "Whisk", "Oven", "Fridge", "Kettle", "Pan"],
         "Objects used to repair a car": ["Wrench", "Jack", "Pliers", "Screwdriver", "Ratchet", "Socket", "Hammer", "Funnel"],
         "Things in a classroom": ["Chalkboard", "Desk", "Chair", "Eraser", "Pencil", "Ruler", "Globe", "Book"],
         "Items in a glovebox": ["Manual", "Registration", "Insurance", "Napkins", "Flashlight", "Pen", "Map", "Sunglasses"],
@@ -68,7 +80,10 @@ const wordRepository = {
         "Types of pasta": ["Penne", "Spaghetti", "Macaroni", "Rigatoni", "Farfalle", "Fusilli", "Linguine", "Orzo"],
         "World currencies": ["Dollar", "Euro", "Yen", "Pound", "Franc", "Rupee", "Peso", "Ruble"],
         "Things in a bathroom": ["Toothbrush", "Soap", "Towel", "Mirror", "Shower", "Toilet", "Sink", "Shampoo"],
-        "Tools in a toolbox": ["Hammer", "Screwdriver", "Wrench", "Pliers", "Tape", "Drill", "Level", "Saw"]
+        "Tools in a toolbox": ["Hammer", "Screwdriver", "Wrench", "Pliers", "Tape", "Drill", "Level", "Saw"],
+        "Public transit": ["Subway", "Bus", "Train", "Tram", "Ferry", "Metro", "Monorail", "Trolley"],
+        "Fishing terms": ["Catch", "Bait", "Hook", "Line", "Sinker", "Rod", "Reel", "Tackle"],
+        "Punctuation marks": ["Dash", "Period", "Comma", "Colon", "Hyphen", "Slash", "Quote", "Apostrophe"]
     },
     "Food & Drink": {
         "Types of cheese": ["Cheddar", "Brie", "Gouda", "Swiss", "Feta", "Provolone", "Havarti", "Parmesan"],
@@ -76,15 +91,20 @@ const wordRepository = {
         "Classic cocktails": ["Martini", "Margarita", "Mojito", "Manhattan", "Negroni", "Daiquiri", "OldFashioned", "Cosmopolitan"],
         "Coffee drinks": ["Latte", "Espresso", "Cappuccino", "Americano", "Macchiato", "Mocha", "FlatWhite", "Cortado"],
         "Types of bread": ["Sourdough", "Rye", "Pita", "Baguette", "Ciabatta", "Focaccia", "Brioche", "Pumpernickel"],
-        "Pizza toppings": ["Pepperoni", "Mushroom", "Onion", "Sausage", "Bacon", "Olive", "Pepper", "Pineapple"]
+        "Pizza toppings": ["Pepperoni", "Mushroom", "Onion", "Sausage", "Bacon", "Olive", "Pepper", "Pineapple"],
+        "Pie flavors": ["Apple", "Cherry", "Pumpkin", "Pecan", "Peach", "Blueberry", "Rhubarb", "Lemon"],
+        "Sandwich types": ["Club", "Sub", "BLT", "Hero", "Panini", "Wrap", "Melt", "Gyro"]
     },
     "Science & Nature": {
         "Types of clouds": ["Cumulus", "Stratus", "Cirrus", "Nimbus", "Alto", "Lenticular", "Mammatus", "Contrail"],
         "Constellations": ["Orion", "Ursa", "Cassiopeia", "Draco", "Pegasus", "Lyra", "Cygnus", "Andromeda"],
         "Precious gemstones": ["Diamond", "Ruby", "Sapphire", "Emerald", "Amethyst", "Topaz", "Opal", "Garnet"],
-        "Elements on the periodic table": ["Helium", "Oxygen", "Carbon", "Gold", "Iron", "Sodium", "Calcium", "Zinc"],
+        "Elements on the periodic table": ["Helium", "Oxygen", "Carbon", "Gold", "Iron", "Sodium", "Calcium", "Zinc", "Mercury", "Silver"],
         "Types of bears": ["Grizzly", "Polar", "Panda", "Brown", "Black", "Koala", "Sloth", "Sun"],
-        "Human organs": ["Heart", "Brain", "Liver", "Lung", "Kidney", "Stomach", "Skin", "Pancreas"]
+        "Human organs": ["Heart", "Brain", "Liver", "Lung", "Kidney", "Stomach", "Skin", "Pancreas"],
+        "Planets": ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+        "Mythological creatures": ["Phoenix", "Dragon", "Griffin", "Unicorn", "Centaur", "Pegasus", "Sphinx", "Hydra"],
+        "Big cats": ["Puma", "Tiger", "Lion", "Jaguar", "Leopard", "Cheetah", "Panther", "Cougar"]
     },
     "History & Geography": {
         "US State Capitals": ["Austin", "Boston", "Denver", "Atlanta", "Phoenix", "Sacramento", "Nashville", "Raleigh"],
@@ -92,7 +112,9 @@ const wordRepository = {
         "Famous landmarks": ["Eiffel", "Colosseum", "TajMahal", "BigBen", "Acropolis", "Stonehenge", "Alhambra", "MachuPicchu"],
         "Oceans and Seas": ["Atlantic", "Pacific", "Indian", "Arctic", "Mediterranean", "Caribbean", "Baltic", "Red"],
         "Ancient civilizations": ["Roman", "Greek", "Egyptian", "Mayan", "Aztec", "Inca", "Persian", "Sumerian"],
-        "Famous rivers": ["Amazon", "Nile", "Mississippi", "Yangtze", "Thames", "Danube", "Ganges", "Volga"]
+        "Famous rivers": ["Amazon", "Nile", "Mississippi", "Yangtze", "Thames", "Danube", "Ganges", "Volga"],
+        "US Presidents": ["Washington", "Lincoln", "Ford", "Bush", "Kennedy", "Adams", "Jefferson", "Truman"],
+        "Ivy League schools": ["Brown", "Harvard", "Yale", "Princeton", "Columbia", "Dartmouth", "Cornell", "Penn"]
     },
     "Basic Categories": {
         "Colors": ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Brown"],
