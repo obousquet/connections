@@ -31,6 +31,11 @@ function initGame() {
     const generator = new PuzzleGenerator(wordRepository);
     currentPuzzle = generator.generatePuzzle();
 
+    const difficultyDisplay = document.getElementById('difficulty-display');
+    if (difficultyDisplay) {
+        difficultyDisplay.textContent = `Difficulty Level: ${currentPuzzle.difficulty}`;
+    }
+
     const shuffledWords = shuffleArray([...currentPuzzle.words]);
 
     shuffledWords.forEach(item => {

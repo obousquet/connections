@@ -1,23 +1,41 @@
-// Logic for generating a puzzle from the word repository.
+// Logic for generating a puzzle from the structured word repository.
 
 class PuzzleGenerator {
     constructor(repository) {
         this.repository = repository;
+        this.wordToCategoryCount = {};
+        
+        // Pre-compute the number of categories each word belongs to across the entire repository
+        for (const theme in this.repository) {
+            for (const category in this.repository[theme]) {
+                const words = this.repository[theme][category];
+                words.forEach(word => {
+                    const upperWord = word.toUpperCase();
+                    if (!this.wordToCategoryCount[upperWord]) {
+                        this.wordToCategoryCount[upperWord] = new Set();
+                    }
+                    this.wordToCategoryCount[upperWord].add(category);
+                });
+            }
+        }
     }
 
-    // Generates a basic puzzle. 
-    // Phase 2: Update this logic to deliberately pick categories and words 
-    // to maximize overlap (words that fit multiple selected categories).
     generatePuzzle() {
-        const allCategories = Object.keys(this.repository);
-        // Randomly pick 4 distinct categories
-        const selectedCategories = this.shuffleArray([...allCategories]).slice(0, 4);
+        const themes = Object.keys(this.repository);
+        // Randomly pick 4 distinct themes
+        const selectedThemes = this.shuffleArray([...themes]).slice(0, 4);
         
         const puzzleWords = [];
+        const selectedCategories = [];
         const usedWords = new Set();
 
-        selectedCategories.forEach(category => {
-            const wordsInCategory = this.repository[category];
+        selectedThemes.forEach(theme => {
+            const categoriesInTheme = Object.keys(this.repository[theme]);
+            // Pick 1 category from this theme
+            const category = this.shuffleArray([...categoriesInTheme])[0];
+            selectedCategories.push(category);
+
+            const wordsInCategory = this.repository[theme][category];
             // Filter out words that have already been used in this puzzle
             const availableWords = wordsInCategory.filter(word => !usedWords.has(word));
             
@@ -33,9 +51,20 @@ class PuzzleGenerator {
             });
         });
 
+        // Compute difficulty: sum of numbers of categories each word belongs to across the entire repo, minus 16
+        let difficultyScore = 0;
+        puzzleWords.forEach(item => {
+            const upperWord = item.word.toUpperCase();
+            difficultyScore += this.wordToCategoryCount[upperWord] ? this.wordToCategoryCount[upperWord].size : 1;
+        });
+        
+        // A minimum score of 0
+        const finalDifficulty = Math.max(0, difficultyScore - 16);
+
         return {
             words: puzzleWords,          // Array of { word, category }
-            categories: selectedCategories // Array of 4 category names
+            categories: selectedCategories, // Array of 4 category names
+            difficulty: finalDifficulty
         };
     }
 
