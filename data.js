@@ -24,8 +24,16 @@ const wordRepository = {
         "Lord of the Rings characters": ["Frodo", "Sam", "Gandalf", "Aragorn", "Legolas", "Gimli", "Gollum", "Sauron"],
         "Marvel superheroes": ["Ironman", "Thor", "Hulk", "Spiderman", "Wolverine", "Daredevil", "Deadpool", "Blade"],
         "Famous fictional detectives": ["Holmes", "Poirot", "Marple", "Columbo", "Monk", "Drew", "Hardy", "Spade"],
-        "Disney princesses": ["Ariel", "Belle", "Cinderella", "Jasmine", "Mulan", "Pocahontas", "Snow", "Aurora"],
-        "Things with a mouse": ["Computer", "Cat", "Trap", "Disney", "Maze", "Cheese", "Pad", "Hole"]
+        "Disney princesses": ["Ariel", "Belle", "Cinderella", "Jasmine", "Mulan", "Pocahontas", "Snow", "Aurora"]
+    },
+    "Shared Word Associations": {
+        "Things with a mouse": ["Computer", "Cat", "Trap", "Disney", "Maze", "Cheese", "Pad", "Hole"],
+        "Things with a key": ["Lock", "Keyboard", "Map", "City", "Piano", "Florida", "Skeleton", "Major"],
+        "Things with a board": ["Surf", "Key", "Skate", "Snow", "Dash", "Chalk", "White", "Mother"],
+        "Things with a ring": ["Phone", "Saturn", "Engagement", "Boxing", "Circus", "Onion", "Tree", "Bell"],
+        "Things you can catch": ["Cold", "Ball", "Breath", "Fish", "Train", "Feelings", "Fire", "Glimpse"],
+        "Words following 'Black'": ["Board", "Berry", "Bird", "Mail", "Jack", "Hole", "Magic", "Out"],
+        "Words preceding 'Paper'": ["Wall", "News", "Toilet", "Scrap", "Wax", "Sand", "Graph", "Blank"]
     },
     "Brands": {
         "Soap brands": ["Dove", "Ivory", "Dial", "Zest", "Coast", "Safeguard", "Olay", "Lux"],
