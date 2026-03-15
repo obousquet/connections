@@ -90,8 +90,9 @@ button:hover {
 
 .solved-row strong {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 5px;
+    word-break: break-word;
 }
 
 .revealed-row {
@@ -109,8 +110,9 @@ button:hover {
 
 .revealed-row strong {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 5px;
+    word-break: break-word;
 }
 
 .found-group {
