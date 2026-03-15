@@ -75,5 +75,12 @@ const wordRepository = {
         "European countries": ["France", "Germany", "Spain", "Italy", "Greece", "Sweden", "Poland", "Austria"],
         "Famous landmarks": ["Eiffel", "Colosseum", "TajMahal", "BigBen", "Acropolis", "Stonehenge", "Alhambra", "MachuPicchu"],
         "Oceans and Seas": ["Atlantic", "Pacific", "Indian", "Arctic", "Mediterranean", "Caribbean", "Baltic", "Red"]
+    },
+    "Basic Categories": {
+        "Colors": ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Brown"],
+        "Furniture": ["Chair", "Table", "Sofa", "Bed", "Desk", "Cabinet", "Stool", "Dresser"],
+        "Fruits": ["Apple", "Banana", "Orange", "Grape", "Kiwi", "Mango", "Pear", "Peach"],
+        "Trees": ["Oak", "Pine", "Maple", "Birch", "Cedar", "Elm", "Willow", "Ash"],
+        "Mushrooms": ["Portobello", "Cremini", "Shiitake", "Oyster", "Enoki", "Morel", "Porcini", "Chanterelle"]
     }
 };
