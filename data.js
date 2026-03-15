@@ -57,5 +57,23 @@ const wordRepository = {
         "Things you find at the beach": ["Sand", "Shells", "Towel", "Sunscreen", "Umbrella", "Waves", "Seagull", "Crab"],
         "Types of pasta": ["Penne", "Spaghetti", "Macaroni", "Rigatoni", "Farfalle", "Fusilli", "Linguine", "Orzo"],
         "World currencies": ["Dollar", "Euro", "Yen", "Pound", "Franc", "Rupee", "Peso", "Ruble"]
+    },
+    "Food & Drink": {
+        "Types of cheese": ["Cheddar", "Brie", "Gouda", "Swiss", "Feta", "Provolone", "Havarti", "Parmesan"],
+        "Ways to prepare eggs": ["Scrambled", "Fried", "Poached", "Boiled", "Baked", "Deviled", "Shirred", "Basted"],
+        "Classic cocktails": ["Martini", "Margarita", "Mojito", "Manhattan", "Negroni", "Daiquiri", "OldFashioned", "Cosmopolitan"],
+        "Coffee drinks": ["Latte", "Espresso", "Cappuccino", "Americano", "Macchiato", "Mocha", "FlatWhite", "Cortado"]
+    },
+    "Science & Nature": {
+        "Types of clouds": ["Cumulus", "Stratus", "Cirrus", "Nimbus", "Alto", "Lenticular", "Mammatus", "Contrail"],
+        "Constellations": ["Orion", "Ursa", "Cassiopeia", "Draco", "Pegasus", "Lyra", "Cygnus", "Andromeda"],
+        "Precious gemstones": ["Diamond", "Ruby", "Sapphire", "Emerald", "Amethyst", "Topaz", "Opal", "Garnet"],
+        "Elements on the periodic table": ["Helium", "Oxygen", "Carbon", "Gold", "Iron", "Sodium", "Calcium", "Zinc"]
+    },
+    "History & Geography": {
+        "US State Capitals": ["Austin", "Boston", "Denver", "Atlanta", "Phoenix", "Sacramento", "Nashville", "Raleigh"],
+        "European countries": ["France", "Germany", "Spain", "Italy", "Greece", "Sweden", "Poland", "Austria"],
+        "Famous landmarks": ["Eiffel", "Colosseum", "TajMahal", "BigBen", "Acropolis", "Stonehenge", "Alhambra", "MachuPicchu"],
+        "Oceans and Seas": ["Atlantic", "Pacific", "Indian", "Arctic", "Mediterranean", "Caribbean", "Baltic", "Red"]
     }
 };
