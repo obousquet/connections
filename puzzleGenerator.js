@@ -14,13 +14,18 @@ class PuzzleGenerator {
         const selectedCategories = this.shuffleArray([...allCategories]).slice(0, 4);
         
         const puzzleWords = [];
+        const usedWords = new Set();
 
         selectedCategories.forEach(category => {
             const wordsInCategory = this.repository[category];
+            // Filter out words that have already been used in this puzzle
+            const availableWords = wordsInCategory.filter(word => !usedWords.has(word));
+            
             // Randomly pick 4 distinct words for this category
-            const selectedWords = this.shuffleArray([...wordsInCategory]).slice(0, 4);
+            const selectedWords = this.shuffleArray([...availableWords]).slice(0, 4);
             
             selectedWords.forEach(word => {
+                usedWords.add(word);
                 puzzleWords.push({
                     word: word,
                     category: category // The intended category for this puzzle

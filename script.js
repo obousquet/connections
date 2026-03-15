@@ -85,11 +85,23 @@ function checkGroup() {
         if (currentPuzzle.categories.includes(category) && !foundCategories.includes(category)) {
             foundCategories.push(category);
             
+            const gameGrid = document.getElementById('game-grid');
+            
+            // Remove the 4 selected individual word boxes from the grid
             selectedWordsObjects.forEach(item => {
-                item.element.classList.add('found-group');
-                item.element.classList.remove('selected');
-                item.element.style.pointerEvents = 'none'; 
+                item.element.remove();
             });
+
+            // Create a new wide row for the solved category
+            const solvedRow = document.createElement('div');
+            solvedRow.classList.add('solved-row');
+            
+            const wordsString = selectedWordsObjects.map(item => item.word).join(', ');
+            solvedRow.innerHTML = `<strong>${category}</strong><span>${wordsString}</span>`;
+            
+            // Prepend the solved row to the top of the grid
+            gameGrid.prepend(solvedRow);
+
             selectedWordsObjects = [];
             checkWinCondition();
         } else {
