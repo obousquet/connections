@@ -11,14 +11,21 @@ const wordRepository = {
         "Palindromes": ["Racecar", "Level", "Radar", "Civic", "Kayak", "Madam", "Rotor", "Stats"],
         "Words that sound like letters": ["Sea", "Eye", "Jay", "Cue", "Are", "Tea", "You", "Why"],
         "Words ending in 'ology'": ["Biology", "Geology", "Zoology", "Theology", "Ecology", "Mythology", "Psychology", "Sociology"],
+        "Prefixes to 'logy'": ["Bio", "Geo", "Zoo", "Theo", "Eco", "Mytho", "Psycho", "Socio"],
+        "Prefixes to 'metry'": ["Geo", "Sym", "Tele", "Opto", "Odo", "Baro", "Alti", "Thermo"],
+        "Suffixes to 'inf'": ["ect", "er", "ame", "orm", "lux", "erior", "ancy", "ant"],
         "Starts with 'Geo'": ["Geometry", "Geography", "Geology", "Geode", "Gecko", "Geocentric", "Geothermal", "Geomancy"],
+        "Suffixes to 'Geo'": ["metry", "graphy", "logy", "de", "cko", "centric", "thermal", "mancy"],
         "Words ending in 'ment'": ["Moment", "Garment", "Payment", "Argument", "Statement", "Document", "Fragment", "Segment"],
+        "Prefixes to 'ment'": ["Mo", "Gar", "Pay", "Argu", "State", "Docu", "Frag", "Seg"],
         "Words with double 'O'": ["Book", "Look", "Cook", "Hook", "Took", "Nook", "Rook", "Wood"],
         "Three-letter animals": ["Cat", "Dog", "Bat", "Rat", "Pig", "Cow", "Fox", "Ape"],
         "Words with exactly one consonant": ["Eye", "Awe", "Owe", "Era", "Are", "Ore", "Ale", "Icy"],
         "Synonyms for Happy": ["Glad", "Joyful", "Cheerful", "Merry", "Jolly", "Upbeat", "Thrilled", "Elated"],
         "Words with a silent 'K'": ["Knee", "Knife", "Knight", "Knock", "Knit", "Knot", "Knob", "Knack"],
-        "Words ending in 'X'": ["Box", "Fox", "Tax", "Six", "Mix", "Wax", "Fix", "Flex"]
+        "Words ending in 'X'": ["Box", "Fox", "Tax", "Six", "Mix", "Wax", "Fix", "Flex"],
+        "Double consonants": ["Apple", "Better", "Happen", "Letter", "Matter", "Summer", "Yellow", "Dinner"],
+        "Words that are also numbers": ["Won", "Too", "Fore", "Ate", "Ten", "Six", "Nine", "One"]
     },
     "Pop Culture & Entertainment": {
         "James Bond characters": ["Bond", "M", "Q", "Moneypenny", "Blofeld", "Oddjob", "Jaws", "Scaramanga"],
@@ -33,7 +40,10 @@ const wordRepository = {
         "Rock bands": ["Queen", "Kiss", "Rush", "Journey", "Nirvana", "Oasis", "Genesis", "Heart"],
         "Disney characters": ["Daisy", "Donald", "Mickey", "Goofy", "Pluto", "Minnie", "Scrooge", "Ariel"],
         "Doctor Who actors": ["Smith", "Tennant", "Baker", "Eccleston", "Capaldi", "Whittaker", "McCoy", "McGann"],
-        "Stephen King novels": ["It", "Misery", "Carrie", "Shining", "Stand", "PetSematary", "Cujo", "Salem"]
+        "Stephen King novels": ["It", "Misery", "Carrie", "Shining", "Stand", "PetSematary", "Cujo", "Salem"],
+        "Oscar Best Picture winners": ["Titanic", "Gladiator", "Moonlight", "Parasite", "Rocky", "Platoon", "Argo", "Spotlight"],
+        "Fictional robots": ["WallE", "Terminator", "Data", "Bender", "Megatron", "Ultron", "Rosie", "Voltron"],
+        "Famous directors": ["Spielberg", "Tarantino", "Nolan", "Scorsese", "Kubrick", "Hitchcock", "Coppola", "Cameron"]
     },
     "Shared Word Associations": {
         "Things with a mouse": ["Computer", "Cat", "Trap", "Disney", "Maze", "Cheese", "Pad", "Hole"],
@@ -49,7 +59,9 @@ const wordRepository = {
         "Things you make": ["Bed", "Money", "Sense", "Time", "Peace", "Love", "Waves", "Room"],
         "Things you shout": ["Hey", "Stop", "Help", "Fire", "Wait", "Look", "Duck", "Jump"],
         "Things that are round": ["Ball", "Coin", "Ring", "Tire", "Sun", "Globe", "Moon", "Dot"],
-        "Things you can lose": ["Time", "Mind", "Key", "Money", "Sleep", "Game", "Weight", "Hope"]
+        "Things you can lose": ["Time", "Mind", "Key", "Money", "Sleep", "Game", "Weight", "Hope"],
+        "Things that are cold": ["Ice", "Snow", "Wind", "Winter", "Heart", "Steel", "Beer", "Shoulder"],
+        "Things you can fold": ["Paper", "Clothes", "Chair", "Cards", "Tent", "Hand", "Origami", "Wallet"]
     },
     "Brands": {
         "Soap brands": ["Dove", "Ivory", "Dial", "Zest", "Coast", "Safeguard", "Olay", "Lux"],
@@ -59,7 +71,9 @@ const wordRepository = {
         "Fast food chains": ["McDonalds", "BurgerKing", "Wendys", "TacoBell", "KFC", "Subway", "Dominos", "Chipotle"],
         "Tech companies": ["Apple", "Google", "Microsoft", "Amazon", "Meta", "Tesla", "Sony", "Samsung"],
         "Car brands": ["Ford", "Toyota", "Honda", "BMW", "Audi", "Chevrolet", "Nissan", "Mercedes", "Saturn", "Mercury", "Lincoln", "Jaguar"],
-        "Streaming services": ["Disney", "Netflix", "Hulu", "Prime", "Peacock", "Max", "Apple", "Paramount"]
+        "Streaming services": ["Disney", "Netflix", "Hulu", "Prime", "Peacock", "Max", "Apple", "Paramount"],
+        "Candy brands": ["Snickers", "Twix", "Skittles", "Mars", "Hershey", "Reese", "KitKat", "MilkyWay"],
+        "Airlines": ["Delta", "United", "Southwest", "Emirates", "Ryanair", "Qantas", "Lufthansa", "JetBlue"]
     },
     "Games & Activities": {
         "Things you can play": ["Piano", "Game", "Music", "Fool", "Catch", "Role", "Guitar", "Sports"],
@@ -74,7 +88,9 @@ const wordRepository = {
         "Baseball terms": ["Diamond", "Pitcher", "Base", "Strike", "Bat", "Glove", "Home", "Out"],
         "Golf terms": ["Green", "Tee", "Hole", "Iron", "Birdie", "Eagle", "Bogey", "Par"],
         "Bowling terms": ["Strike", "Spare", "Pin", "Alley", "Gutter", "Turkey", "Split", "Frame"],
-        "Chess pieces": ["King", "Queen", "Rook", "Knight", "Bishop", "Pawn"]
+        "Chess pieces": ["King", "Queen", "Rook", "Knight", "Bishop", "Pawn"],
+        "Poker hands": ["Flush", "Straight", "FullHouse", "Pair", "TwoPair", "HighCard", "Quads", "Royal"],
+        "Track and field events": ["Sprint", "Relay", "Hurdles", "LongJump", "HighJump", "ShotPut", "Javelin", "Discus"]
     },
     "Locations & Objects": {
         "Objects found in a kitchen": ["Blender", "Toaster", "Microwave", "Spatula", "Whisk", "Oven", "Fridge", "Kettle", "Pan"],
@@ -91,7 +107,9 @@ const wordRepository = {
         "Punctuation marks": ["Dash", "Period", "Comma", "Colon", "Hyphen", "Slash", "Quote", "Apostrophe"],
         "Things with buttons": ["Coat", "Shirt", "Remote", "Phone", "Radio", "Mouse", "Piano", "Elevator"],
         "Things you can pack": ["Clothes", "Shoes", "Book", "Towel", "Soap", "Brush", "Camera", "Map"],
-        "Things that are sticky": ["Gum", "Tape", "Glue", "Honey", "Sap", "Tar", "Jam", "Syrup"]
+        "Things that are sticky": ["Gum", "Tape", "Glue", "Honey", "Sap", "Tar", "Jam", "Syrup"],
+        "Objects found in a garage": ["Car", "Bike", "Tools", "Boxes", "Lawnmower", "Paint", "Oil", "Tires"],
+        "Things in a purse": ["Keys", "Wallet", "Phone", "Chapstick", "Gum", "Pen", "Mirror", "Mints"]
     },
     "Food & Drink": {
         "Types of cheese": ["Cheddar", "Brie", "Gouda", "Swiss", "Feta", "Provolone", "Havarti", "Parmesan"],
@@ -101,7 +119,9 @@ const wordRepository = {
         "Types of bread": ["Sourdough", "Rye", "Pita", "Baguette", "Ciabatta", "Focaccia", "Brioche", "Pumpernickel"],
         "Pizza toppings": ["Pepperoni", "Mushroom", "Onion", "Sausage", "Bacon", "Olive", "Pepper", "Pineapple"],
         "Pie flavors": ["Apple", "Cherry", "Pumpkin", "Pecan", "Peach", "Blueberry", "Rhubarb", "Lemon"],
-        "Sandwich types": ["Club", "Sub", "BLT", "Hero", "Panini", "Wrap", "Melt", "Gyro"]
+        "Sandwich types": ["Club", "Sub", "BLT", "Hero", "Panini", "Wrap", "Melt", "Gyro"],
+        "Ice cream flavors": ["Vanilla", "Chocolate", "Strawberry", "Mint", "Coffee", "Pistachio", "RockyRoad", "CookieDough"],
+        "Types of tea": ["Green", "Black", "Oolong", "White", "Chamomile", "EarlGrey", "Matcha", "Chai"]
     },
     "Science & Nature": {
         "Types of clouds": ["Cumulus", "Stratus", "Cirrus", "Nimbus", "Alto", "Lenticular", "Mammatus", "Contrail"],
@@ -112,7 +132,9 @@ const wordRepository = {
         "Human organs": ["Heart", "Brain", "Liver", "Lung", "Kidney", "Stomach", "Skin", "Pancreas"],
         "Planets": ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
         "Mythological creatures": ["Phoenix", "Dragon", "Griffin", "Unicorn", "Centaur", "Pegasus", "Sphinx", "Hydra"],
-        "Big cats": ["Puma", "Tiger", "Lion", "Jaguar", "Leopard", "Cheetah", "Panther", "Cougar"]
+        "Big cats": ["Puma", "Tiger", "Lion", "Jaguar", "Leopard", "Cheetah", "Panther", "Cougar"],
+        "Dinosaurs": ["TRex", "Triceratops", "Stegosaurus", "Velociraptor", "Brachiosaurus", "Pterodactyl", "Spinosaurus", "Ankylosaurus"],
+        "Types of trees": ["Oak", "Pine", "Maple", "Birch", "Cedar", "Elm", "Willow", "Ash"]
     },
     "History & Geography": {
         "US State Capitals": ["Austin", "Boston", "Denver", "Atlanta", "Phoenix", "Sacramento", "Nashville", "Raleigh"],
@@ -124,7 +146,9 @@ const wordRepository = {
         "US Presidents": ["Washington", "Lincoln", "Ford", "Bush", "Kennedy", "Adams", "Jefferson", "Truman"],
         "Ivy League schools": ["Brown", "Harvard", "Yale", "Princeton", "Columbia", "Dartmouth", "Cornell", "Penn"],
         "Boroughs of New York": ["Manhattan", "Brooklyn", "Queens", "Bronx", "StatenIsland"],
-        "Continents": ["Africa", "Antarctica", "Asia", "Europe", "NorthAmerica", "SouthAmerica", "Australia"]
+        "Continents": ["Africa", "Antarctica", "Asia", "Europe", "NorthAmerica", "SouthAmerica", "Australia"],
+        "Countries in South America": ["Brazil", "Argentina", "Chile", "Peru", "Colombia", "Venezuela", "Ecuador", "Bolivia"],
+        "US National Parks": ["Yosemite", "Yellowstone", "Zion", "GrandCanyon", "Glacier", "Acadia", "Olympic", "Badlands"]
     },
     "Basic Categories": {
         "Colors": ["Red", "Blue", "Green", "Yellow", "Orange", "Purple", "Pink", "Brown", "White", "Black"],
@@ -135,13 +159,52 @@ const wordRepository = {
         "Metals": ["Gold", "Silver", "Copper", "Iron", "Zinc", "Lead", "Platinum", "Aluminum"],
         "Shapes": ["Circle", "Square", "Triangle", "Rectangle", "Oval", "Diamond", "Hexagon", "Octagon", "Star"],
         "Weather terms": ["Rain", "Snow", "Wind", "Hail", "Sleet", "Fog", "Cloud", "Storm"],
-        "Clothing items": ["Shirt", "Pants", "Socks", "Shoes", "Hat", "Coat", "Dress", "Skirt"]
+        "Clothing items": ["Shirt", "Pants", "Socks", "Shoes", "Hat", "Coat", "Dress", "Skirt"],
+        "Emotions": ["Happy", "Sad", "Angry", "Fear", "Disgust", "Surprise", "Joy", "Trust"],
+        "Farm animals": ["Cow", "Pig", "Horse", "Sheep", "Chicken", "Goat", "Duck", "Turkey"]
     },
     "Careers & Roles": {
         "Medical professions": ["Doctor", "Nurse", "Surgeon", "Dentist", "Pharmacist", "Therapist", "Paramedic", "Optometrist"],
         "Fantasy RPG classes": ["Warrior", "Mage", "Rogue", "Cleric", "Paladin", "Ranger", "Bard", "Monk"],
         "Roles in a play": ["Lead", "Understudy", "Director", "Chorus", "Extra", "Villain", "Hero", "Fool"],
         "Jobs in a restaurant": ["Chef", "Waiter", "Host", "Bartender", "Busser", "Manager", "Dishwasher", "Cook"],
-        "Short occupations": ["Cop", "Doc", "Spy", "Maid", "Judge", "Mayor", "Nurse", "Pilot"]
+        "Short occupations": ["Cop", "Doc", "Spy", "Maid", "Judge", "Mayor", "Nurse", "Pilot"],
+        "Musicians in an orchestra": ["Violinist", "Cellist", "Flutist", "Trumpeter", "Pianist", "Harpist", "Oboist", "Timpanist"],
+        "Construction jobs": ["Builder", "Foreman", "Plumber", "Electrician", "Carpenter", "Mason", "Welder", "Painter"]
+    },
+    "Synonyms & States": {
+        "To Cut": ["Slice", "Chop", "Dice", "Mince", "Hack", "Carve", "Snip", "Shear"],
+        "To Walk": ["Stroll", "Saunter", "March", "Strut", "Hike", "Pace", "Tread", "Wander"],
+        "Nonsense": ["Baloney", "Bunk", "Hogwash", "Malarkey", "Tripe", "Rubbish", "Drivel", "Poppycock"],
+        "Excellent": ["Stellar", "Superb", "Prime", "Choice", "Quality", "Super", "Great", "Grand"],
+        "To Speak": ["Talk", "Chat", "Converse", "Discuss", "Gab", "Gossip", "Prattle", "Babble"],
+        "Abundance": ["Wealth", "Plethora", "Bounty", "Cornucopia", "Myriad", "Profusion", "Surplus", "Spate"],
+        "Beginner": ["Novice", "Rookie", "Amateur", "Trainee", "Apprentice", "Greenhorn", "Tyro", "Neophyte"],
+        "Trickery": ["Deceit", "Fraud", "Hoax", "Ruse", "Scam", "Sham", "Subterfuge", "Guile"],
+        "Huge": ["Massive", "Colossal", "Gigantic", "Mammoth", "Immense", "Gargantuan", "Titanic", "Vast"],
+        "Tiny": ["Minute", "Miniature", "Microscopic", "Petite", "Diminutive", "Teensy", "IttyBitty", "Wee"],
+        "Boring": ["Dull", "Tedious", "Mundane", "Prosaic", "Humdrum", "Tiresome", "Dreary", "Monotonous"],
+        "Confusing": ["Baffling", "Puzzling", "Perplexing", "Mystifying", "Complex", "Confounding", "Obscure", "Cryptic"]
+    },
+    "Parts of a Whole": {
+        "Parts of a Car": ["Engine", "Tire", "Brakes", "Steering", "Exhaust", "Battery", "Radiator", "Transmission"],
+        "Parts of a Shoe": ["Sole", "Tongue", "Lace", "Heel", "Eyelet", "Insole", "Vamp", "Toe"],
+        "Parts of a Book": ["Spine", "Cover", "Page", "Chapter", "Index", "Glossary", "Jacket", "Binding"],
+        "Parts of a Computer": ["Motherboard", "CPU", "RAM", "HardDrive", "PowerSupply", "GPU", "Fan", "Case"],
+        "Parts of a Flower": ["Petal", "Stem", "Leaf", "Pollen", "Stamen", "Pistil", "Sepal", "Thorn"],
+        "Parts of a Sailboat": ["Mast", "Hull", "Keel", "Rudder", "Boom", "Jib", "Mainsail", "Tiller"],
+        "Parts of a Castle": ["Moat", "Drawbridge", "Turret", "Keep", "Portcullis", "Battlement", "Bailey", "Rampart"],
+        "Parts of a Sword": ["Blade", "Hilt", "Pommel", "Crossguard", "Tang", "Fuller", "Quillon", "Grip"],
+        "Parts of an Eyeball": ["Pupil", "Iris", "Cornea", "Retina", "Lens", "Sclera", "Macula", "Fovea"],
+        "Parts of a Suit": ["Lapel", "Lining", "Vent", "Cuff", "Collar", "Seam", "Buttonhole", "Pocket"],
+        "Anatomy of a Bird": ["Beak", "Talon", "Feather", "Wing", "Crest", "Crop", "Gizzard", "Keel"]
+    },
+    "Secondary Meanings & Homonyms": {
+        "Computer Terms": ["Apple", "Mouse", "Monitor", "Web", "Cloud", "Server", "Terminal", "Cookie"],
+        "Tools for Beating": ["Club", "Bat", "Whip", "Punch", "Cane", "Switch", "Belt", "Paddle"],
+        "Found on a Tree": ["Bark", "Leaf", "Branch", "Knot", "Twig", "Sap", "Root", "Trunk"],
+        "Meanings of 'Light'": ["Pale", "Weightless", "Tap", "Lamp", "Ignite", "Beacon", "Fair", "Mild"],
+        "Types of Bows": ["Rain", "Violin", "Ship", "Gift", "Tie", "Hair", "Archery", "Shoe"],
+        "Things You Can Pitch": ["Tent", "Baseball", "Idea", "Voice", "Fit", "Camp", "Sales", "Tantrum"]
     }
 };

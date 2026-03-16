@@ -26,21 +26,42 @@ class PuzzleGenerator {
         const selectedThemes = this.shuffleArray([...themes]).slice(0, 4);
         
         const puzzleWords = [];
-        const selectedCategories = [];
+        const selectedCategoriesInfo = [];
         const usedWords = new Set();
 
+        // First, pick the categories
         selectedThemes.forEach(theme => {
             const categoriesInTheme = Object.keys(this.repository[theme]);
             // Pick 1 category from this theme
             const category = this.shuffleArray([...categoriesInTheme])[0];
-            selectedCategories.push(category);
+            selectedCategoriesInfo.push({ theme, category });
+        });
 
+        const selectedCategories = selectedCategoriesInfo.map(info => info.category);
+
+        // Helper to get ambiguity within the chosen puzzle categories
+        const getAmbiguityInPuzzle = (word) => {
+            const upperWord = word.toUpperCase();
+            const wordCategories = this.wordToCategoryCount[upperWord] || new Set();
+            let count = 0;
+            selectedCategories.forEach(cat => {
+                if (wordCategories.has(cat)) count++;
+            });
+            return count;
+        };
+
+        // Now pick words prioritizing those that appear in multiple chosen categories
+        selectedCategoriesInfo.forEach(({ theme, category }) => {
             const wordsInCategory = this.repository[theme][category];
             // Filter out words that have already been used in this puzzle
             const availableWords = wordsInCategory.filter(word => !usedWords.has(word));
             
-            // Randomly pick 4 distinct words for this category
-            const selectedWords = this.shuffleArray([...availableWords]).slice(0, 4);
+            // Maximize ambiguity by sorting based on appearance in the selected puzzle categories
+            const shuffledAvailable = this.shuffleArray([...availableWords]);
+            shuffledAvailable.sort((a, b) => getAmbiguityInPuzzle(b) - getAmbiguityInPuzzle(a));
+            
+            // Pick 4 distinct words for this category
+            const selectedWords = shuffledAvailable.slice(0, 4);
             
             selectedWords.forEach(word => {
                 usedWords.add(word);
@@ -51,11 +72,10 @@ class PuzzleGenerator {
             });
         });
 
-        // Compute difficulty: sum of numbers of categories each word belongs to across the entire repo, minus 16
+        // Compute difficulty: sum of overlaps across the chosen categories for the words in the puzzle, minus 16
         let difficultyScore = 0;
         puzzleWords.forEach(item => {
-            const upperWord = item.word.toUpperCase();
-            difficultyScore += this.wordToCategoryCount[upperWord] ? this.wordToCategoryCount[upperWord].size : 1;
+            difficultyScore += getAmbiguityInPuzzle(item.word);
         });
         
         // A minimum score of 0
